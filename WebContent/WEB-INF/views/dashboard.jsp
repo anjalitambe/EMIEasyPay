@@ -168,9 +168,9 @@
                 <div class="content animated fadeInLeft">                
                   <h3>Card Number: <%=session.getAttribute("cardID") %>             <br/> 
                        Name:  <%=session.getAttribute("firstName") %>  <%=session.getAttribute("lastName") %>    <br/> 
-                       Validity Date:  <%=session.getAttribute("validDate") %>            <br/> 
+                       Validity Date: 21/01/2020<%--   <%=session.getAttribute("validDate") %>   --%>          <br/> 
                        Card Type: <%=session.getAttribute("cardType") %>                  </h3>
-                  <h2 >ACTIVATED: <%=session.getAttribute("activated") %>  </h2>
+                  <h2 >ACTIVATION STATUS: ACTIVATED<%-- <%=session.getAttribute("activated") %>  --%> </h2>
                   </div>
               </div>            
             </div>
@@ -193,76 +193,40 @@
                     <table class="aa-totals-table">
                       <tbody>
                         <tr>
-                          <th>Total Credits</th>
+                          <th>Total Credits in your EMIcard</th>
                           <td>Rs.<%=session.getAttribute("credits") %></td>
                         </tr>
                        
-                        <tr>
+                        <%-- <tr>
                            <th>Remaining Credits</th>
                            <td>Rs.<%=session.getAttribute("remaingCredits") %></td>
-                         </tr>
+                         </tr> --%>
                       </tbody>
                     </table><br><br>
-                    <h4>Amount Due Rs.xxxx On date : dd/mm/yyyy </h4>                      
+                    <h4>Your Product </h4>                      
                     <table class="aa-totals-table">
                         <tbody>
-                          <tr>
+           <%--                <tr>
                             <th>Name of Product</th>
-                            <td>xxxxxxx</td>
+                            <td><%=session.getAttribute("productName") %></td>
                           </tr>
                           <tr>
                             <th>Cost of Product</th>
-                            <td>xxxxx</td>
-                          </tr>
-                          <tr>
+                            <td><%=session.getAttribute("productPrice") %></td>
+                          </tr> --%>
+                          <%-- <tr>
                              <th>Amount Paid</th>
-                             <td>xxxxx</td>
-                           </tr>
+                             <td><%=session.getAttribute("credits") %></td>
+                           </tr> --%>
                            <tr>
-                              <th>Balance</th>
-                              <td>xxxxx</td>
+                              <th>Current balance in your bank account</th>
+                              <td><%=session.getAttribute("balance") %></td>
                             </tr>
                         </tbody>
                       </table><br><br>
 
                   </div><br><br>
-               <div class="table-responsive">
-                 <!--  <table class="table">
-                    <h2>RECENT TRANSACTIONS</h2>
-                    <thead>
-                      <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Date of Purchase</th>
-                        <th>Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                        <td>$250</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td><input  type="date"></td>
-                        <td>$250</td>
-                      </tr>
-                      <tr>
-                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                        <td>$150</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td><input  type="date"></td>
-                        <td>$150</td>
-                      </tr>
-                      <tr>                       
-                        <td><a class="aa-cart-title" href="#">Polo T-Shirt</a></td>
-                        <td>$50</td>
-                        <td><input class="aa-cart-quantity" type="number" value="1"></td>
-                        <td><input  type="date"></td>
-                        <td>$50</td>
-                      </tr>                      
-                      </tbody>
-                  </table> -->
-                </div>
+             
              </form>
              <!-- Credits View -->            
            </div>

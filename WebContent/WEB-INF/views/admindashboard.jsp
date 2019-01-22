@@ -76,7 +76,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="aa-error-area">                       
-            <a href="adminuser"> Go to User Details</a>
+            <a href="ListCustomers"> Go to User Details</a>
             <a href="AdminProduct"> Go to Product Details</a>
             <a href="Product"> Products View</a>
           </div>

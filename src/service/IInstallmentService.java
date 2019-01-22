@@ -7,8 +7,8 @@ public interface IInstallmentService {
 	
 	double calculateEMI(int duration);
 
-	double calculateNewBal(double emi, double bal);
+	double calculateNewBal(double emi, double bal,int id);
 
-	double getRemCredits(double cred, double price);
+	double getRemCredits(double cred, double price,int id);
 
 }

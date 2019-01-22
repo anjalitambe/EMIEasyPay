@@ -28,4 +28,10 @@ public interface CustomerDAO {
 	Double createBalance();
 	
 	Date createValidDate();
+	
+	void editCustomer(Customer customer);
+	
+void deleteCustomer(int customerId);//changed integer to int
+void activateCustomer(int id);
+
 }

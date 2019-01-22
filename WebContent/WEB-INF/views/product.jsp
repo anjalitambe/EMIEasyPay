@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
  <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
  <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -125,14 +126,15 @@
              <form:hidden path="productPrice"  value="10000"/>
                <form:hidden path="productCategory"  value="Furniture"/>
                  <form:hidden path="unitStock"  value="5"/>
-                 <form:hidden path="productDescription"  value="gwdgwghweyedg"/>
+                 <form:hidden path="productDescription"  value="Antique box sized wooden commode with stoneware chamber pot.
+Could be used as plant pot and stand"/>
             <a class="aa-product-img"><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn1.jpg" alt="frenchrococo img"></a>
           <!--   <a class="aa-add-card-btn" href="Product-Detail">Check Details</a> -->
           <input  class="aa-add-card-btn" type="submit" value="view details">
               <figcaption>
               
-              <h4 class="aa-product-title"><!-- <a href="Product-Detail"> --> Antique Commode</a></h4>
-              <span class="aa-product-price" path=>Rs.10000/-</span>
+              <h4 class="aa-product-title"> Antique Commode</h4>
+              <span class="aa-product-price">Rs.10000/-</span>
            
           
               
@@ -149,11 +151,12 @@
              <form:hidden path="productPrice"  value="9000"/>
                <form:hidden path="productCategory"  value="Furniture"/>
                  <form:hidden path="unitStock"  value="3"/>
-                 <form:hidden path="productDescription"  value="blaaaaqaaaaaaa"/>
+                 <form:hidden path="productDescription"  value="Our Twin over Twin Mission Stairway Bunk Bed with Under Bed Drawers in White is carefully crafted for timeless style and lasting comfort."/>
            <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn2.jpg" alt="bunkbeds img"></a> 
-            <input  class="aa-add-card-btn" type="submit" value="View details">              
+            <input  class="aa-add-card-btn" type="submit" value="View details">       
+                  
             <figcaption>
-             <h4 class="aa-product-title"><a href="Product-Detail">BunkBed</a></h4>
+             <h4 class="aa-product-title">Bunk Bed</h4>
              <span class="aa-product-price">Rs.9000/-</span>
             </figcaption>
              </form:form>
@@ -168,11 +171,11 @@
              <form:hidden path="productPrice"  value="27000"/>
                <form:hidden path="productCategory"  value="Furniture"/>
                  <form:hidden path="unitStock"  value="12"/>
-                 <form:hidden path="productDescription"  value="blaaaaaaqaaaaaaa"/>
+                 <form:hidden path="productDescription"  value="Changing Pad, Clip For Keys, Insulated, Insulated Bottle Pocket, Numerous Sections, Personalized, Water Resistant"/>
             <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn3.jpg" alt="babycrib img"></a> 
             <input  class="aa-add-card-btn" type="submit" value="View details">                            
              <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Baby's Crib</a></h4>
+              <h4 class="aa-product-title">Baby's Crib</h4>
               <span class="aa-product-price">Rs.27000/-</span>
             </figcaption>
              </form:form>
@@ -187,13 +190,13 @@
              <form:hidden path="productPrice"  value="25000"/>
                <form:hidden path="productCategory"  value="Furniture"/>
                  <form:hidden path="unitStock"  value="10"/>
-                 <form:hidden path="productDescription"  value="blaaaahgvbvqaaaaaaa"/>
+                 <form:hidden path="productDescription"  value="Demi Corbielle bed frame in good condition . These frames take a standard double mattress . "/>
             <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn4.jpg" alt="FrenchBed img"></a>
-            <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>                            
+                                       
             <input  class="aa-add-card-btn" type="submit" value="View details"> 
             <figcaption>
                
-              <h4 class="aa-product-title"><a href="Product-Detail">French Bed</a></h4>
+              <h4 class="aa-product-title">French Bed</h4>
               <span class="aa-product-price">Rs.25000</span>
               </form:form>
             </figcaption>
@@ -208,13 +211,13 @@
              <form:hidden path="productPrice"  value="52550"/>
                <form:hidden path="productCategory"  value="Furniture"/>
                  <form:hidden path="unitStock"  value="10"/>
-                 <form:hidden path="productDescription"  value="blaaaahgvbvqaaaaaaa"/>
+                 <form:hidden path="productDescription"  value="Washable, Mat and dog kennel separation design, easy to clean. Professional dog kennel material at the bottom."/>
             <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn5.jpg" alt="dogbed img"></a> 
-            <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>  
+          
             <input  class="aa-add-card-btn" type="submit" value="View details">                         
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Dog PuffyBed</a></h4>
-              <span class="aa-product-price">Rs.52550/-</span>
+              <h4 class="aa-product-title">Dog PuffyBed</h4>
+              <span class="aa-product-price">Rs. 52550/-</span>
             </figcaption>
             </form:form>
           </figure>                                 
@@ -228,11 +231,11 @@
              <form:hidden path="productPrice"  value="5000"/>
                <form:hidden path="productCategory"  value="Furniture"/>
                  <form:hidden path="unitStock"  value="10"/>
-                 <form:hidden path="productDescription"  value="blaaaahgvbvqaaaaaaa"/>
+                 <form:hidden path="productDescription"  value="Vintage Retro Mid Century Office Desk Chair with Chrome Swivel Base And Teak armrests. Made by Doerner Faultless of Canada. "/>
             <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn6.jpg" alt="Retrochair img"></a>
             <input  class="aa-add-card-btn" type="submit" value="View details">                         
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">RetroChair</a></h4>
+              <h4 class="aa-product-title">Retro Chair</h4>
               <span class="aa-product-price">Rs.5000/-</span>
             </figcaption>
             </form:form>
@@ -242,24 +245,42 @@
         <!-- start single product item -->
         <li>
           <figure>
+              <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Low CoffeeTable"/>
+             <form:hidden path="productPrice"  value="7000"/>
+               <form:hidden path="productCategory"  value="Furniture"/>
+            
+                 <form:hidden path="unitStock"  value="10"/>
+                   <form:hidden path="productDescription"  value="Contemporary coffee table features a great furniture piece for your living room."/> 
             <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn7.jpg" alt="Coffeetable img"></a>
-            <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>                           
+
+            <input  class="aa-add-card-btn" type="submit" value="View Details">                     
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Low CoffeeTable</a></h4>
+              <h4 class="aa-product-title">Low Coffee Table</h4>
               <span class="aa-product-price">Rs.7000/-</span>
             </figcaption>
+             </form:form>
           </figure>                                                           
         </li>
 
         <!-- start single product item -->
         <li>
           <figure>
+              <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="BubbleChair"/>
+             <form:hidden path="productPrice"  value="8500"/>
+               <form:hidden path="productCategory"  value="Furniture"/>
+               <form:hidden path="unitStock"  value="10"/>
+               <form:hidden path="productDescription" value="TheBubble Hanging Chair Stand, crafted in stainless steel, provides a sturdy support for the Bubble Hanging Chair. Stainless steel with gray finish. Mid-century style. Assembly required."/>
+                 
             <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/Furniture/furn8.jpg" alt="bubblechair img"></a>
-            <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>                            
+                       
+            <input  class="aa-add-card-btn" type="submit" value="View Details">               
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">BubbleChair</a></h4>
+              <h4 class="aa-product-title">Bubble Chair</h4>
               <span class="aa-product-price">Rs.8500/-</span>
             </figcaption>
+             </form:form>
           </figure>                                                   
         </li>                        
       </ul>   
@@ -273,96 +294,164 @@
           <!-- start single product item -->
           <li>
             <figure>
+            <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Slim Full Black Magnet Strap"/>
+             <form:hidden path="productPrice"  value="7000"/>
+             
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Rado Raymond Weil.  Inside, a precision quartz movement powers its classic three-hand timekeeping."/>
+                 
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc1.jpg" alt="watch"></a> 
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>         
+                
+              <input  class="aa-add-card-btn" type="submit" value="View Details">       
               <figcaption>
-                <h4 class="aa-product-title"><a href="Product-Detail">Slim Full Black Magnet Strap</a></h4>
+                <h4 class="aa-product-title">Slim Full Black Magnet Strap</h4>
                 <span class="aa-product-price">Rs.7000/-</span>
               </figcaption>
+              </form:form>
             </figure>                         
          </li>
 
-          <!-- start single product item -->
+          <!-- start single product item --><!-- same value repeated -->
           <li>
               <figure>
+              <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Slim White Magnet Strap"/>
+             <form:hidden path="productPrice"  value="7000"/>
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                <form:hidden path="productDescription" value="Rado Raymond Weil.  Inside, a precision quartz movement powers its classic three-hand timekeeping."/>
+                 
                 <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc2.jpg" alt="watch"></a>
-                <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>          
+                    
+                <input  class="aa-add-card-btn" type="submit" value="View Details">   
                 <figcaption>
-                    <h4 class="aa-product-title"><a href="Product-Detail">Slim Full Black Magnet Strap</a></h4>
+                    <h4 class="aa-product-title">Slim White Magnet Strap</h4>
                     <span class="aa-product-price">Rs.7000/-</span>
                 </figcaption>
+                </form:form>
               </figure>                         
            </li>
 
           <!-- start single product item -->
           <li>
               <figure>
+              <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Women's watch by casio"/>
+             <form:hidden path="productPrice"  value="7000"/>
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Designed with a stainless steel band, it will seamlessly match your clothing style. Constructed with a water-resistant design"/>
+                 
                 <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc3.jpg" alt="watch"></a> 
-                <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>         
+                       
+                <input  class="aa-add-card-btn" type="submit" value="View Details"> 
                 <figcaption>
-                  <h4 class="aa-product-title"><a href="Product-Detail">Women's watch by casio</a></h4>
+                  <h4 class="aa-product-title">Women's watch by casio</h4>
                   <span class="aa-product-price">Rs.7000/-</span>
                 </figcaption>
+                </form:form>
               </figure>                         
            </li>
 
           <!-- start single product item -->
           <li>
               <figure>
+              <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Brown Leather Strap Wrist Watch"/>
+             <form:hidden path="productPrice"  value="10000"/>
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value=" Luminous hands and Roman numeral hour markers. Minute markers around the outer rim. Dial Type: Analog. "/>
                 <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc4.jpg" alt="watch"></a> 
-                <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>         
+             
+                <input  class="aa-add-card-btn" type="submit" value="View Details">         
                 <figcaption>
-                  <h4 class="aa-product-title"><a href="Product-Detail">Brown Leather Strap Wrist Watch</a></h4>
+                  <h4 class="aa-product-title">Brown Leather Strap Wrist Watch</h4>
                   <span class="aa-product-price">Rs.10000/-</span>
                 </figcaption>
+                 </form:form>
               </figure>                         
            </li>
 
           <!-- start single product item -->
           <li>
               <figure>
+             <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Diouz Women's watch"/>
+             <form:hidden path="productPrice"  value="8000"/>
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                  <form:hidden path="productDescription" value="For women, strong and sensual style for a glamorous and trendy look, mould-breaker.  "/>
                 <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc5.jpg" alt="watch"></a>  
-                <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>        
+            
+                <input  class="aa-add-card-btn" type="submit" value="View Details">   
                 <figcaption>
-                  <h4 class="aa-product-title"><a href="Product-Detail">Diouz Women's watch</a></h4>
+                  <h4 class="aa-product-title">Diouz Women's watch</h4>
                   <span class="aa-product-price">Rs.8000/-</span>
                 </figcaption>
+                </form:form>
               </figure>                         
            </li>
 
            <!-- start single product item -->
            <li>
               <figure>
+               <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Crystal Quartz Women's watch"/>
+             <form:hidden path="productPrice"  value="12000"/>
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                   <form:hidden path="productDescription" value="White Gold Diamond Dial Woven Bracelet Quartz Watch. "/>
                 <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc6.jpg" alt="watch"></a>    
-                <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>      
+                    
+                <input  class="aa-add-card-btn" type="submit" value="View Details">  
                 <figcaption>
-                  <h4 class="aa-product-title"><a href="Product-Detail">Crystal Quartz Women's watch</a></h4>
+                  <h4 class="aa-product-title">Crystal Quartz Women's watch</h4>
                   <span class="aa-product-price">Rs.12000/-</span>
                 </figcaption>
+                </form:form>
               </figure>                         
            </li>
 
           <!-- start single product item -->
           <li>
               <figure>
+            <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Bracelate watch"/>
+             <form:hidden path="productPrice"  value="9000"/>
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Women Vintage Handmade Leather Bracelet Leaf Decoration Quartz Charm Wrist Watch   Dial Color:White Dial material"/>
                 <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc7.jpg" alt="watch"></a>  
-                <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>        
+            
+                <input  class="aa-add-card-btn" type="submit" value="View Details">     
                 <figcaption>
-                  <h4 class="aa-product-title"><a href="Product-Detail">Bracelate watch</a></h4>
+                  <h4 class="aa-product-title">Bracelate watch</h4>
                   <span class="aa-product-price">Rs.9000/-</span>
                 </figcaption>
+                </form:form>
               </figure>                         
            </li>
 
           <!-- start single product item -->
           <li>
               <figure>
+              <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Rolex"/>
+             <form:hidden path="productPrice"  value="25000"/>
+               <form:hidden path="productCategory"  value="wristwatch"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="ORIGINAL ROLEX Unidirectional rotatable 60-minute graduated, scratch-resistant Cerachrom insert in ceramic, numerals and graduations coated in platinum"/>
                 <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/watches/wtc8.jpg" alt="watch"></a> 
-                <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>         
+           
+                <input  class="aa-add-card-btn" type="submit" value="View Details">       
                 <figcaption>
-                  <h4 class="aa-product-title"><a href="Product-Detail">Rolex</a></h4>
+                  <h4 class="aa-product-title">Rolex</h4>
                   <span class="aa-product-price">Rs.25000/-</span>
                 </figcaption>
+                </form:form>
               </figure>                         
            </li> 
            </ul>   
@@ -375,96 +464,161 @@
         <!-- start single product item -->
         <li>
           <figure>
+          <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Rolex"/>
+             <form:hidden path="productPrice"  value="60000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Buy Original iphone at best price on EMI. "/>
             <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect1.jpg" alt="Electronics"></a>
-            <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>
+         
+            <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Iphone X</a></h4>
+              <h4 class="aa-product-title">Iphone X</h4>
               <span class="aa-product-price">Rs.60000/-</span>
             </figcaption>
+            </form:form>
           </figure>   
           </li>     
 
         <!-- start single product item -->
         <li>
           <figure>
+          <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Godrej Front Load Automatic Washing Machine"/>
+             <form:hidden path="productPrice"  value="15000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Godrej Front Load 7.5 Kg WAT28468IN Fully Automatic Fully Automatic Front Load Washing Machine"/>
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect2.jpg" alt="Electronics"></a>
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>
+          
+              <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Godrej Front Load Automatic Washing Machine</a></h4>
+              <h4 class="aa-product-title">Godrej Front Load Automatic Washing Machine</h4>
               <span class="aa-product-price">Rs.15000/-</span>
             </figcaption>
+             </form:form>
           </figure>                                    
         </li>
 
         <!-- start single product item -->
         <li>
           <figure>
+          <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="A powerful turbo Blender. Stainless steel housing with 500W motor."/>
+             <form:hidden path="productPrice"  value="13000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                   <form:hidden path="productDescription" value=" "/>
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect3.jpg" alt="Electronics"></a>
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>
+         
+              <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Prestige Juicer Mixer Grinder</a></h4>
-              <span class="aa-product-price">Ra.13000/-</span>
+              <h4 class="aa-product-title">Prestige Juicer Mixer Grinder</h4>
+              <span class="aa-product-price">Rs.13000/-</span>
             </figcaption>
+            </form:form>
           </figure>                                                   
         </li>
 
         <!-- start single product item -->
         <li>
           <figure>
+           <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Whirlpool French Door Refrigerator"/>
+             <form:hidden path="productPrice"  value="20000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="The new french door bottom mount refrigerator from Whirlpool is the perfect international design for your boutique kitchen."/>
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect4.jpg" alt="Electronics"></a>
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>
+           
+              <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Whirlpool French Door Refrigerator</a></h4>
-              <span class="aa-product-price">Rs.20000/-</span>
+              <h4 class="aa-product-title">Whirlpool French Door Refrigerator</h4>
+              <span class="aa-product-price">Rs. 20000/-</span>
             </figcaption>
+             </form:form>
           </figure>                          
         </li>
 
         <!-- start single product item -->
         <li>
           <figure>
+          <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Espresso Machine"/>
+             <form:hidden path="productPrice"  value="12000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Consistently brew a flawless cup of coffee with the Jura A1 Fully Automatic Coffee Machine.  "/>
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect5.jpg" alt="Electronics"></a>
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>
+        
+              <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">espresso machine</a></h4>
+              <h4 class="aa-product-title">Espresso Machine</h4>
               <span class="aa-product-price">Rs.12000/-</span>
             </figcaption>
+            </form:form>
           </figure>                           
         </li>
 
         <!-- start single product item -->
         <li>
           <figure>
+           <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Microwave Oven"/>
+             <form:hidden path="productPrice"  value="15000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="The Farberware classic microwave delivers power, style and convenience with a sleek design to compliment your kitchen."/>
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect6.jpg" alt="Electronics"></a> 
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a> 
+       
+              <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Microwave Oven</a></h4>
+              <h4 class="aa-product-title">Microwave Oven</h4>
               <span class="aa-product-price">Rs.15000/-</span>
             </figcaption>
+             </form:form>
           </figure>                                  
         </li>
 
         <!-- start single product item -->
         <li>
+          
           <figure>
+           <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Xiaomi Redmi Note 4x"/>
+             <form:hidden path="productPrice"  value="15000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Xiaomi Redmi Note 4x buy at Zero Cost EMI "/>
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect7.jpg" alt="electronics"></a>  
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>  
+          
+              <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Xiaomi Redmi Note 4x</a></h4>
-              <span class="aa-product-price">Rs.12000/-</span>
+              <h4 class="aa-product-title">Xiaomi Redmi Note 4x</h4>
+              <span class="aa-product-price">Rs.15000/-</span>
             </figcaption>
+            </form:form>
           </figure>                            
         </li>
 
         <!-- start single product item -->
         <li>
           <figure>
+          <form:form action="Product-Detail" modelAttribute="product" >
+            <form:hidden path="productName"  value="Whirlpool 305 IMFresh"/>
+             <form:hidden path="productPrice"  value="12000"/>
+               <form:hidden path="productCategory"  value="electronics"/>
+                 <form:hidden path="unitStock"  value="10"/>
+                 <form:hidden path="productDescription" value="Whirlpool 305 IMFRESH PRM 280L 3S Refrigerator Sapphire Exotica"/>
               <a class="aa-product-img" ><img src="${pageContext.request.contextPath}/resources/img/electronics/ect8.jpg" alt="polo shirt img"></a> 
-              <a class="aa-add-card-btn"href="Product-Detail">Check Details</a>     
+          
+              <input  class="aa-add-card-btn" type="submit" value="View Details"> 
             <figcaption>
-              <h4 class="aa-product-title"><a href="Product-Detail">Whirlpool 305 IMFresh</a></h4>
+              <h4 class="aa-product-title">Whirlpool 305 IMFresh</h4>
               <span class="aa-product-price">Rs.12000/-</span>
             </figcaption>
+            </form:form>
           </figure>                           
         </li>                        
       </ul>      

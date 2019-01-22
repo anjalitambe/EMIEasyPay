@@ -49,7 +49,7 @@ import service.IProductService;
 @Controller
 @SessionAttributes(value = "sessionuser")
 public class MainController {
-	
+	//only annotate this part
 	private IProductService productService;
 
 	public IProductService getProductService() {
@@ -84,25 +84,16 @@ public class MainController {
 		this.iInstallmentService = iInstallmentService;
 	}
 	
-	
-	
-
-
-
-
 
 	
-
-	
-	
-	// FOR LOGIN AND LOGIN FORM
-	@RequestMapping(value = "/Login", method = RequestMethod.GET)
-	public String indexes() {
-		return "login";
-	}
+			// FOR LOGIN AND LOGIN FORM
+			@RequestMapping(value = "/Login", method = RequestMethod.GET)
+			public String indexes() {
+			return "login";
+			}
 	
 
-		/*i changed here!!!!!!!!!*/
+		
 		@RequestMapping(value = "/LoginForms", method = RequestMethod.POST)
 		public ModelAndView loginpro1(HttpServletRequest request, HttpServletResponse response,
 				HttpSession session,	@ModelAttribute("login") Customer u, BindingResult result, Model model, EMICard e) {
@@ -113,34 +104,22 @@ public class MainController {
 			if(customerService.verifyUser(username,password))
 			{
 				mav = new ModelAndView("dashboard");
-				Customer customer = customerService.getCustomer(username, password);//new code
+				Customer customer = customerService.getCustomer(username, password);
 				session.setAttribute("customerobj", customer);
-				//whatever you want to display add here
-				session.setAttribute("firstName", customer.getFirstName());//new code
+	
+				session.setAttribute("firstName", customer.getFirstName());
 				session.setAttribute("lastName", customer.getLastName());
 				session.setAttribute("cardType", customer.getCard().getCardType());
 				session.setAttribute("validDate",customer.getCard().getValidDate());
 				session.setAttribute("activated",customer.getCard().getActivated());
 				session.setAttribute("cardID",customer.getCard().getCardID());
-			
-				
 				session.setAttribute("balance",customer.getBank().getBalance());
-			session.setAttribute("credits",customer.getCard().getCredits());
+				session.setAttribute("credits",customer.getCard().getCredits());
 				session.setAttribute("remaingCredits",customer.getCard().getRemaingCredits());
 			
-//				
 				
-//				int cred = customer.getCard().getCredits();
-//				int remaingCred = customer.getCard().getRemaingCredits();
-//				
-//				int usedCredits = cred - remaingCred;
-//				session.setAttribute("usedCredits", usedCredits);
-				
-				
-				
-				//session.setAttribute("usedCredits",);
-				//calculate used credits
-				
+				Product pro=(Product) session.getAttribute("productobj");
+				Installment i=(Installment) session.getAttribute("installmentobj");
 				
 				System.out.println("Username is: "+ username+ " Password is: "+password);
 				
@@ -164,7 +143,7 @@ public class MainController {
 		
 		 @RequestMapping(value = "/RegisterFormsSpring", method = RequestMethod.POST)
 		    public String validateregistrationPage1(@Valid @ModelAttribute("customer") Customer customer,
-		    		BindingResult bindingResult,Model model) {
+		    		BindingResult bindingResult,Model model,HttpSession session) {
 			 	System.out.println(customer);
 			 	String card1="Gold";
 			 	String card2="Titanium";
@@ -187,19 +166,10 @@ public class MainController {
 				Date vd = customerService.createValidDate();
 				customer.getCard().setValidDate(vd);
 			    customerService.addCustomer(customer);
-			    return "regSuccess";
+			    return "regSuccessPage";
 		 	}
 		 
 	
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		//FOR ADMIN LOGIN 
 		@RequestMapping(value = "/Admin", method = RequestMethod.GET)
@@ -234,7 +204,7 @@ public class MainController {
 
 		}  
 		
-		 //Adminproduct to edit or delete or view the products in db
+		 //Admin product to edit or delete or view the products in db
 		 @RequestMapping(value = "/AdminProduct", method = RequestMethod.GET)
 			public ModelAndView adminProduct(Model model) 
 			{
@@ -278,33 +248,29 @@ public class MainController {
 			public String redirectToProductDets(HttpServletRequest request, HttpServletResponse response,
 					HttpSession session,Customer u, BindingResult result, Model model, EMICard e,
 					@ModelAttribute("product") Product p) {
-				System.out.println(p);
-				//System.out.println(inst);
-				model.addAttribute("installment", new Installment());
-				Product prod=p;
-				session.setAttribute("productobj",prod);
-				Customer c= (Customer) session.getAttribute("customerobj");
-			  System.out.println("Customer in product is:"+c);
+			System.out.println(p);
+			model.addAttribute("installment", new Installment());
+			Product prod=p;
+			session.setAttribute("productobj",prod);
+			Customer c= (Customer) session.getAttribute("customerobj");
+			System.out.println("Customer in product is:"+c);
 			  
-			  session.setAttribute("productName", p.getProductName());
-			  session.setAttribute("productPrice", p.getProductPrice());
-			  session.setAttribute("productCategory", p.getProductCategory());
-			  session.setAttribute("unitStock", p.getUnitStock());
-			  session.setAttribute("productDescription", p.getProductDescription());
+			session.setAttribute("productName", p.getProductName());
+			session.setAttribute("productPrice", p.getProductPrice());
+			session.setAttribute("productCategory", p.getProductCategory());
+			session.setAttribute("unitStock", p.getUnitStock());
+			session.setAttribute("productDescription", p.getProductDescription());
 			  
 
-				session.setAttribute("firstName", c.getFirstName());//new code
-				session.setAttribute("lastName", c.getLastName());
-				session.setAttribute("cardType", c.getCard().getCardType());
-				session.setAttribute("validDate",c.getCard().getValidDate());
-				session.setAttribute("activated",c.getCard().getActivated());
-				session.setAttribute("cardID",c.getCard().getCardID());
+			session.setAttribute("firstName", c.getFirstName());
+			session.setAttribute("lastName", c.getLastName());
+			session.setAttribute("cardType", c.getCard().getCardType());
+			session.setAttribute("validDate",c.getCard().getValidDate());
+			session.setAttribute("activated",c.getCard().getActivated());
+			session.setAttribute("cardID",c.getCard().getCardID());
 				
-				session.setAttribute("balance",c.getBank().getBalance());
-				
-				
-				
-				
+			session.setAttribute("balance",c.getBank().getBalance());
+
 				return "product-detail";
 			}
 			
@@ -313,7 +279,7 @@ public class MainController {
 			public String EMIDuration(HttpServletRequest request, HttpServletResponse response,
 					HttpSession session,Customer u, BindingResult result, Model model, 
 					@ModelAttribute("installment") Installment inst) {
-				Installment installment = inst;//new code
+				Installment installment = inst;
 				session.setAttribute("installmentobj", installment);
 				
 				
@@ -345,24 +311,28 @@ public class MainController {
 				Product p= (Product) session.getAttribute("productobj");
 				
 				System.out.println("ji");
-				System.out.println(c);
-				System.out.println(p);
+				System.out.println("persisting customer is"+c);
+				System.out.println("persistent product is"+p);
+				System.out.println("persistent installment is"+i);
 				
 				//To deduct emi from bank account
 				double emi=i.getAmountToPay();
 				double bal=c.getBank().getBalance();
-				double newbal= iInstallmentService.calculateNewBal(emi,bal);
-				//double newbal = bal-emi; 
-				System.out.println(newbal);
-				c.getBank().setBalance(newbal);
+				int id = c.getCustomerId();
+				System.out.println("id is"+id);
+				System.out.println("emi is"+emi);
+				System.out.println("balance is"+bal);
+				double newbal= iInstallmentService.calculateNewBal(emi, bal, id);
+				System.out.println("newbal is"+newbal);
 				
-				
+	
 				//To deduct credits from EMI Card
 				
 				double cred= c.getCard().getCredits();
+				System.out.println("total credits old"+cred);
 				double price=p.getProductPrice();
-				double remcreds= iInstallmentService.getRemCredits(cred,price);
-				//double remcred= cred-price;
+				double remcreds= iInstallmentService.getRemCredits(cred,price,id);
+		
 				c.getCard().setRemaingCredits(remcreds);
 				session.setAttribute("remaingCredits", remcreds);
 				session.setAttribute("amountToPay", price);
@@ -384,13 +354,7 @@ public class MainController {
 					return "successpayment";
 					}
 			
-			
-			 
-				
 
-				
-				
-				
 				//ADDING A PRODUCT
 				@RequestMapping(value = "AddProduct")
 				public String getProductForm(Model model) {		
@@ -400,31 +364,28 @@ public class MainController {
 				@RequestMapping(value = "addProductForms", method = RequestMethod.POST)
 				public String addingProduct(@ModelAttribute("product") @Valid Product prod, BindingResult result,
 					@RequestParam("productImage") MultipartFile file, Model model) {
-//					// Binding Result is used if the form that has any error then it will
-//					// redirect to the same page without performing any functions
-////					if (result.hasErrors()) {
-					
-////						return "addProduct";}
-				System.out.println(result.toString());
+				
+					System.out.println(result.toString());
 					System.out.println("File:" + file.getName());
 					System.out.println("ContentType:" + file.getContentType());
-//					
+				
 					try {
 							byte[ ] b =file.getBytes();	
 							Session session = sf.openSession();
 							Blob blob= Hibernate.getLobCreator(session).createBlob(b);
-							
-						
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-			System.out.println(result.toString());
-			System.out.println("product being added :" + prod);
-				productService.addProduct(prod);
+							} catch (IOException e) {
+								e.printStackTrace();
+								 }
+					System.out.println(result.toString());
+					System.out.println("product being added :" + prod);
+					productService.addProduct(prod);
+					
+					
+					
 //				Path path = Paths
 //					.get( "D:/EMI Repos/EMICardManagement1/WebContent/resources/img/products/"
 //								+ prod.getProductName() + ".jpg");
-			//	
+				
 //				MultipartFile image = (MultipartFile) prod.getProductImage();
 //				try {
 //					image.transferTo(new File(path.toString()));
@@ -436,27 +397,7 @@ public class MainController {
 //					
 //					e.printStackTrace();
 //				}
-				
-				
-				
-				
-				
-//					MultipartFile image = prod.getProductImage();
-//					if (image != null && !image.isEmpty()) {
-//						Path path = Paths
-//							.get( "D:/EMI Repos/EMICardManagement1/WebContent/resources/img/products"
-//										+ prod.getProductId() + ".jpg");
-			//
-//					try {
-//						image.transferTo(new File(path.toString()));
-//					} catch (IllegalStateException e) {
-//						e.printStackTrace();
-//					} catch (IOException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-
-					
+		
 					return "redirect:/AdminProduct";
 					
 				}
@@ -464,39 +405,7 @@ public class MainController {
 				
 				
 				
-//				@RequestMapping("ListProducts") 
-//				public ModelAndView getAllProducts() {
-//					  List<Product> products = productService.getAllProducts(); 
-//					  return new ModelAndView("productList", "products", products);
-//					  }
-
-				
-
-				
-//				@RequestMapping(value = "/admin/editProduct", method = RequestMethod.POST)
-//				public String editProduct(@ModelAttribute(value = "editProductObj") Product product) {
-//					System.out.println("here");
-//					productService.editProduct(product);
-//					return "redirect:/productList";
-//				}
-				
-//				@RequestMapping(value = "/editProductbyAdmin",method = RequestMethod.POST)
-//				public String editprod(@ModelAttribute("editProductObj") Product product, BindingResult r) {
-//					System.out.println(r.toString());
-//					productService.editProduct(product);
-//					return "productList";	
-//						}
-				
-				
-				//EDIT PRODUCT BY ADMIN
-				@RequestMapping(value = "/admin/product/editProduct/{productId}")
-				public ModelAndView getEditForm(@PathVariable(value = "productId") Integer productId) {
-					Product product = productService.getProductById(productId);
-					System.out.println("ghhh");
-					return new ModelAndView("editProduct", "editProductObj", product);
-				}
-				
-				
+//		
 				
 				@RequestMapping(value = "/trying",method = RequestMethod.POST)
 				public String trying(@ModelAttribute("editProductObj") Product p,BindingResult r) {
@@ -507,28 +416,68 @@ public class MainController {
 					
 				}
 				
+				//EDIT PRODUCT BY ADMIN
+				@RequestMapping(value = "/admin/product/editProduct/{productId}")
+				public ModelAndView getEditForm(@PathVariable(value = "productId") Integer productId) {
+					Product product = productService.getProductById(productId);
+					System.out.println("ghhh");
+					return new ModelAndView("editProduct", "editProductObj", product);
+				}
 				
+
 				
 				//DELETING A PRODUCT BY ADMIN
 				
 				@RequestMapping("admin/product/delete/{productId}")
 				public String deleteProduct(@PathVariable(value = "productId") Integer productId) {
-
-			//	
-//					Path path = Paths.get("C:/Users/Ismail/workspace/ShoppingCart/src/main/webapp/WEB-INF/resource/images/products/"
-//							+ productId + ".jpg");
-			//
-//					if (Files.exists(path)) {
-//						try {
-//							Files.delete(path);
-//						} catch (IOException e) {
-//							e.printStackTrace();
-//						}
-//					}
-
-					productService.deleteProduct(productId);
-					
+					productService.deleteProduct(productId);	
 					return "redirect:/AdminProduct";
+				}
+				
+
+				
+				//list all customers
+				@RequestMapping("ListCustomers") 
+				public ModelAndView getAllCustomers() {				
+					  List<Customer> customers = customerService.getAllCustomers(); 
+					  System.out.println(customers);
+					  return new ModelAndView("adminCustomerList", "customers", customers);
+					  }
+				
+				
+				
+				//DELETING A PRODUCT BY ADMIN			
+				@RequestMapping("admin/customer/delete/{customerId}")
+				public String deleteCustomer(@PathVariable(value = "customerId") Integer customerId) {
+					customerService.deleteCustomer(customerId);
+					
+					return "redirect:/ListCustomers";
+				}
+				
+				
+				//Editing a customer--
+				@RequestMapping(value = "/admin/customer/editCustomer/{customerId}")
+				public ModelAndView getEditForm(@PathVariable(value = "customerId") int customerId,
+					HttpSession session) {
+					Customer customer= customerService.getCustomerById(customerId);
+					return new ModelAndView("editAdminCustomer", "editCustomerObj", customer);
+				}
+				
+				@RequestMapping(value = "/tryingAnj",method = RequestMethod.POST)
+				public String trying(@ModelAttribute("editCustomerObj") Customer c,BindingResult r,HttpSession session) {
+			
+					System.out.println("changed obj");
+					System.out.println(r.toString());
+					System.out.println(c);
+					
+//					boolean actstatus= c.getActivated2();
+//					session.setAttribute("activated2", actstatus);
+//					System.out.println("current status after edit"+actstatus);
+//					
+					customerService.editCustomer(c);
+					c.setAddress((Address) session.getAttribute("address"));
+					return "redirect:/ListCustomers";
+					
 				}
 
 				

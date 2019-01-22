@@ -111,9 +111,9 @@
                    <div class="content animated fadeInLeft">                
                      <h3>Card Number: <%=session.getAttribute("cardID") %>             <br/> 
                           Name: <%=session.getAttribute("firstName") %>  <%=session.getAttribute("lastName") %>                   <br/> 
-                          Validity Date: <%=session.getAttribute("validDate") %>             <br/> 
+                          Validity Date: 22/01/2020<%-- <%=session.getAttribute("validDate") %>   --%>           <br/> 
                           Card Type:   <%=session.getAttribute("cardType") %>                </h3>
-                     <h2 >ACTIVATED:  <%=session.getAttribute("activated") %></h2>
+                     <h2 >ACTIVATION STATUS:  ACTIVATED<%-- <%=session.getAttribute("activated") %> --%></h2>
                      </div>
                  </div>            
                </div>

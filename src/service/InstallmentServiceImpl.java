@@ -18,15 +18,15 @@ public class InstallmentServiceImpl implements IInstallmentService {
 	}
 
 	@Override
-	public double calculateNewBal(double emi, double bal) {
+	public double calculateNewBal(double emi, double bal,int id) {
 		// TODO Auto-generated method stub
-		return installmentDAO.calculateNewBal(emi,bal);
+		return installmentDAO.calculateNewBal(emi,bal,id);
 	}
 
 	@Override
-	public double getRemCredits(double cred, double price) {
+	public double getRemCredits(double cred, double price,int id) {
 		// TODO Auto-generated method stub
-		return installmentDAO.calculateNewBal(cred,price);
+		return installmentDAO.getRemCredits(cred, price,id);
 	}
 
 }

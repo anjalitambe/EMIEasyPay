@@ -75,4 +75,25 @@ public class CustomerServiceImpl implements CustomerService {
 		return this.customerDAO.createValidDate();
 	}
 
+	@Override
+	public void editCustomer(Customer customer) {
+		customerDAO.editCustomer(customer);
+
+		
+	}
+
+	@Override
+	public void deleteCustomer(int customerId) {
+		customerDAO.deleteCustomer(customerId);
+		
+	}
+
+	@Override
+	public void activateCustomer(int id) {
+		customerDAO.activateCustomer(id);
+		
+	}
+
+	
+
 }

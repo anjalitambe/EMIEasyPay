@@ -19,6 +19,7 @@ import org.springframework.stereotype.Repository;
 
 
 import model.Customer;
+import model.EMICard;
 
 
 @Repository
@@ -52,14 +53,16 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 
 	@Override
-	public List<Customer> getAllCustomers() {
-		Session session = sessionFactory.openSession();
-		Transaction tx = session.beginTransaction();
-	//	List<Customer> customerList = session.createQuery("from Customer").list();
-		List<Customer> customerList = session.createQuery("select customerId from Customer c, EMICard e where c.card_cardid = e.cardid;").list();
-		tx.commit();
-		session.close();
-		return customerList;
+
+		public List<Customer> getAllCustomers() {
+			Session session = sessionFactory.openSession();
+			Transaction tx = session.beginTransaction();
+		List<Customer> customerList = session.createQuery("from Customer").list();
+			//List<Customer> customerList = session.createQuery("select customerId from Customer c, EMICard e where c.card_cardid = e.cardid").list();
+			tx.commit();
+			session.close();
+			return customerList;
+
 	}
 	
 	//@Override
@@ -231,6 +234,82 @@ public class CustomerDAOImpl implements CustomerDAO {
 //		java.sql.Date jadwalPengobatan = new java.sql.Date(output);
 //
 		return null;
+	}
+
+
+
+	@Override
+	public void editCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+		
+//		Session session = sessionFactory.openSession();
+//		Transaction tx = session.beginTransaction();
+//		session.update(customer);
+//		System.out.println("customer updated successfully");
+//		tx.commit();
+//		session.flush();
+//		session.close();
+//		
+		
+//		// TODO Auto-generated method stub
+//
+		Session session = sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
+		EMICard card = customer.getCard();
+	//card.setValidDate(validDate);
+//		Customer logcustomer = (Customer)session.get(Customer.class, customer);
+//		logcustomer.setCard(card);
+//		boolean activ=customer.getActivated2();
+//		logcustomer.setActivated2(activ);
+		//session.saveOrUpdate(logcustomer);
+		session.saveOrUpdate(customer);
+		System.out.println("customer updated successfully");
+		//Customer customer1 = 
+     //(Customer)session.get(Customer.class, customer); 
+		//customer1.setCard(card);
+    // session.update(customer1); 
+		tx.commit();
+		session.flush();
+		session.close();
+
+	}
+
+
+
+	@Override
+	public void deleteCustomer(int customerId) {
+		// TODO Auto-generated method stub
+				Session session = sessionFactory.openSession();
+				Transaction tx = session.beginTransaction();
+				Customer customer = (Customer) session.get(Customer.class, customerId);
+				session.delete(customer);
+				System.out.println("Customer deleted successfully");
+				tx.commit();
+				session.flush();
+				session.close();
+
+	}
+
+
+
+	@Override
+	public void activateCustomer(int id) {
+		Session session = this.sessionFactory.openSession();
+		Transaction tx=session.beginTransaction();
+		System.out.println("above query");
+		System.out.println("this is"+id);
+
+		
+		String query="update Customer c set c.activated2='accepted' where c.customerId=:customerId";
+		System.out.println("inside update queryyy");
+		Query q=session.createQuery(query);	
+		q.setInteger("customerId", id);
+		
+		q.executeUpdate();
+		System.out.println("exeupdate"+q.executeUpdate());
+		tx.commit();
+
 	}
 	
 }

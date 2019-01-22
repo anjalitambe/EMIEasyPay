@@ -23,7 +23,7 @@ public class EMICard implements Serializable{
 	private String cardType;
 	
 	@Column(columnDefinition = "int default 100")
-	private int credits;
+	private double credits;
 
 	@Column(columnDefinition = "int default 0")
 	private double remaingCredits;
@@ -50,11 +50,11 @@ public class EMICard implements Serializable{
 	public void setCardType(String cardType) {
 		this.cardType = cardType;
 	}
-	public int getCredits() {
+	public double getCredits() {
 		return credits;
 	}
-	public void setCredits(int credits) {
-		this.credits = credits;
+	public void setCredits(double remcred) {
+		this.credits = remcred;
 	}
 	public double getRemaingCredits() {
 		return remaingCredits;
@@ -82,7 +82,7 @@ public class EMICard implements Serializable{
 				+ credits + ", remaingCredits=" + remaingCredits + ", activated=" + activated 
 				+ "]";
 	}
-	public EMICard(int cardID, Date validDate, String cardType, int credits, double remaingCredits, Boolean activated,
+	public EMICard(int cardID, Date validDate, String cardType, double credits, double remaingCredits, Boolean activated,
 			Customer customer) {
 		super();
 		this.cardID = cardID;

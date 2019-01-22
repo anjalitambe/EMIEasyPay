@@ -267,7 +267,7 @@
                                           </div>
                                           <div class="col-75">
                                             <form:input path="address.country" type="text" id="country" name="Country"
-                                             placeholder="Country" pattern="[A-Za-z]{5,}" title="Only text allowed"/>
+                                             placeholder="India" pattern="[A-Za-z]{5,}" title="Only text allowed"/>
                                           </div>
                                         </div>
                                         <div class="row">

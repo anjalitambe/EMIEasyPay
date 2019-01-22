@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -46,7 +44,7 @@
        </div> 
        <!-- / wpf loader Two -->       
      <!-- SCROLL TOP BUTTON -->
-       <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+       <a class="scrollToTop" href=""><i class="fa fa-chevron-up"></i></a>
      <!-- END SCROLL TOP BUTTON -->
    
      <!-- Start header section -->
@@ -60,7 +58,7 @@
                  <!-- logo  -->
                  <div class="aa-logo">
                    <!-- Text based logo -->
-                   <a >
+                   <a>
                      <span class="fa fa-shopping-cart"></span>
                      <p>EMI<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                    </a>
@@ -74,111 +72,82 @@
      </header>
 <!-- / header section -->
 
- <!-- menu -->
- <section id="menu">
-    <div class="container">
-      <div class="menu-area">
-        <!-- Navbar -->
-        <div class="navbar navbar-default" role="navigation">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>          
-          </div>
-         <div class="navbar-collapse collapse">                           
-            <!-- Left nav -->
-           <div class="aa-header-top-center">
-            <ul class="nav navbar-nav">
-                <li style="float:right"><a href="Logout">Logout</a></li>             
-                <li style="float:right"><a href="Contact">Contact Us</a></li>
-                <li  style="float:right"><a href="Product">Products</a></li>   
-                <li  style="float:right"><a href="Dashboard">My Profile</a></li>                                       
-              </ul>
-          </div>
-        </div>
-      </div>       
-    </div>
-  </section>
-<!-- / menu -->  
- 
-   <!-- product category -->
-  <section id="aa-product-details">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-product-details-area">
-            <div class="aa-product-details-content">
-              <div class="row">
-                <!-- Modal view slider -->
-              <%--   <div class="col-md-5 col-sm-5 col-xs-12">                              
-                  <div class="aa-product-view-slider">                                
-                    <div id="demo-1" class="simpleLens-gallery-container">
-                      <div class="simpleLens-container">
-                        <div class="simpleLens-big-image-container">
-                        <a data-lens-image="${pageContext.request.contextPath}/resources/img/view-slider/large/polo-shirt-1.png"
-                         class="simpleLens-lens-image">
-                        <img src="${pageContext.request.contextPath}/resources/img/view-slider/medium/polo-shirt-1.png" 
-                        class="simpleLens-big-image"></a></div>
-                      </div>
-                      <div class="simpleLens-thumbnails-container">
-                          <a data-big-image="${pageContext.request.contextPath}/resources/img/view-slider/medium/polo-shirt-1.png" 
-                          data-lens-image="${pageContext.request.contextPath}/resources/img/view-slider/large/polo-shirt-1.png" 
-                          class="simpleLens-thumbnail-wrapper" href="#">
-                            <img src="${pageContext.request.contextPath}/resources/img/view-slider/thumbnail/polo-shirt-1.png">
-                          </a>                                    
-                          <a data-big-image="${pageContext.request.contextPath}/resources/img/view-slider/medium/polo-shirt-3.png" 
-                          data-lens-image="${pageContext.request.contextPath}/resources/img/view-slider/large/polo-shirt-3.png" 
-                          class="simpleLens-thumbnail-wrapper" href="#">
-                            <img src="${pageContext.request.contextPath}/resources/img/view-slider/thumbnail/polo-shirt-3.png">
-                          </a>
-                          <a data-big-image="${pageContext.request.contextPath}/resources/img/view-slider/medium/polo-shirt-4.png"
-                           data-lens-image="${pageContext.request.contextPath}/resources/img/view-slider/large/polo-shirt-4.png"
-                            class="simpleLens-thumbnail-wrapper" href="#">
-                            <img src="${pageContext.request.contextPath}/resources/img/view-slider/thumbnail/polo-shirt-4.png">
-                          </a>
-                      </div>
-                    </div>
-                  </div>
-                </div> --%>
-                <!-- Modal view content -->
-                <div class="col-md-7 col-sm-7 col-xs-12">
-                  <div class="aa-product-view-content">
-                    <h3><%=session.getAttribute("productName")%></h3>
-                    <div class="aa-price-block">
-                      <span class="aa-product-view-price"><%=session.getAttribute("productPrice")%></span>
-                      <p class="aa-product-avilability">Availability: <span><%=session.getAttribute("unitStock")%> units in stock</span></p>
-                    </div>
-                    <p><%=session.getAttribute("productDescription")%>                 
-                     <div class="aa-prod-quantity"></div>
-                     <form:form action="DisplayEMI" modelAttribute="installment" >
-                      <form:select path="duration" >
-                          <form:option value="0">EMI Period</form:option>
-                          <form:option  value="3">3 months</form:option>                         
-                          <form:option value="6">6 months</form:option>
-                          <form:option value="9">9 months</form:option>                          
-                          <form:option value="12">12 months</form:option>
-                          <br>
-                          <input type="submit" value="Calculate EMI"> <br>
-                          EMI is: 
-                          <%=session.getAttribute("amountToPay")%><br>
-                        </form:select>
-                        </form:form>
-                      <p class="aa-prod-category">
-                        Category: <a href="#"><%=session.getAttribute("productCategory")%></a>
-                      </p>
-                    </div>
-                    <div class="aa-prod-view-bottom">
-                      <a class="aa-add-to-cart-btn" href="BuyNow">BUY NOW</a>       <br><br>               
-                    </div>
+<!-- Cart view section -->
+ <section id="cart-view">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="cart-view-area">
+           <div class="cart-view-table aa-wishlist-table">
+             <form action="">
+               <div class="table-responsive">                  
+                  <table class="table" id="dataTable">                     
+                    <thead>
+                                  
+                      <tr>  
+                     <th>Customer Name</th>
+					<th>Customer Id</th>
+					<th>Bank Id</th>
+					<!-- <th>DOB</th> -->
+					<th>CardType</th>
+					<!-- <th>Remaining Credits</th>
+					<th>Valid Date</th> --> 
+					<th>IFSC Code</th>
+					<!-- <th>Account Number</th> -->
+					<th>Balance</th>
+					<!-- <th>Status</th> -->
+					
+					
+					<th>Edit</th>
+					<th>Delete</th>
+					<!-- <th>Activate user</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach items="${customers}" var="cust">
+					<tr>
+						<td>${cust.firstName} ${cust.lastName}</td>
+						<td>${cust.customerId}</td>	
+						<td>${cust.bank.bankId}</td>
+						<%-- <td>${cust.dob}</td> --%>
+						<td>${cust.card.cardType}</td>
+		 				<%-- <td>${cust.card.remaingCredits}</td>
+						<td>${cust.card.validDate}</td>  --%>
+						<td>${cust.bank.IFSCCode}</td>
+						<%-- <td>${cust.bank.savingsAccNo}</td> --%>
+						<td>${cust.bank.balance}</td>
+
+                        <td><a href="admin/customer/editCustomer/${cust.customerId}">Edit</a></td>
+						<td><a href="admin/customer/delete/${cust.customerId}" >Delete</a></td>
+						<%-- <td><a href="admin/cardvalid/${cust.activated2}">Verify User</a></td> --%>
+						<%-- <td><a href="admin/customer/activatethisCustomer/${cust.customerId}">Activate</a></td> --%>
+				
+					</tr>
+				</c:forEach>
+                    
+                   
+                      </tbody>
+                    </tr>
+                  </table>
+                  <h1>
+             <!--      <a href="AddProduct">Add new product</a></h1> -->
+                 <div class="row">
+                 <center>
+                    <!--   <input type="button" style="text-align: center" class="aa-browse-btn" value="Add Row"  href="AddProduct"/>
+                      --> </center>
+                     
                   </div>
                 </div>
-              </div>
-            </div>
-           
-<!-- footer -->  
+             </form>             
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- / Cart view section -->
+
+   <!-- footer -->  
   <footer id="aa-footer">
       <!-- footer bottom -->
       <div class="aa-footer-top">
@@ -251,4 +220,4 @@
   <script src="${pageContext.request.contextPath}/resources/js/custom.js"></script>   
 </body>
 </html>
-          
+ 

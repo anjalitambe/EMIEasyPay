@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 public interface InstallmentDAO {
 	
 	double calculateEMI(int duration);
-	double calculateNewBal(double emi, double bal);
-	double getRemCredits(double cred, double price);
+	double calculateNewBal(double emi, double bal,int id);
+	double getRemCredits(double cred, double price,int id);
 
 }
