@@ -88,7 +88,7 @@ An admin manages multiple products
       box-shadow: 1px 1px 10px 1px grey;
     }
 </style>
-<img src='..\master\images\ER-diagram.png' height=350px>
+<img src='..\master\images\ER-diagram.png' height=350px style="border-radius: 25px;background: #73AD21;padding: 20px; width: 200px;height: 150px; box-shadow: 1px 1px 10px 1px grey;">
 
 <br>
 Working of Easy Pay
