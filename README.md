@@ -2,9 +2,9 @@
 
 <br>
 An online shopping portal that provides a virtual EMI card to the registered customers to shop from the Easy-Pay website. The card has various benefits depending on the plan selected.
-1. &nbsp;&nbsp;Gold
-2. &nbsp;&nbsp;Platinum
-3. &nbsp;&nbsp;Titanium
+1. Gold
+2. Platinum
+3. Titanium
 <br>
 Benefits as per the plan selected:
 <table>
@@ -93,20 +93,19 @@ Person #1 - Customer
 4. Additionally customers can add more credits to their card
 
 <br>Landing Page <br>
-<img src='..\master\images\home-page.png'>
-<br>Registration Form<br><img src='..\master\images\registraion-page.png'>
-<br>Registration Success<br><img src='..\master\images\registration-success.jpg'>
-<br>Login Form<br><img src='..\master\images\login-page.png'>
-<br>Customer Dashboard<br><img src='..\master\images\customer-dashboard.png'>
-<br>Product List<br><img src='..\master\images\product-category.png'>
-<br>Product Details<br><img src='..\master\images\buy-product.png'>
-<br>Payment<br><img src='..\master\images\checkout-page.jpg'>
-<br>Payment Success<br><img src='..\master\images\sucessful-payment.jpg'>
-<br>Customer Logout<br><img src='..\master\images\log-out.jpg'>
-<br>Admin Login<br><img src='..\master\images\admin-login.jpg'>
-<br>Admin Dashboard<br><img src='..\master\images\admin-options.jpg'>
-<br>Manage Customers<br><img src='..\master\images\admin-customer-view.png'>
-<br>Manage Products<br><img src='..\master\images\admin-product-view.png'>
+<kbd>
+    <img src='..\master\images\home-page.png'>
+</kbd>
+<br>Registration Form<br><kbd><img src='..\master\images\registraion-page.png'></kbd>
+<br>Registration Success<br><kbd><img src='..\master\images\registration-success.jpg'></kbd>
+<br>Login Form<br><kbd><img src='..\master\images\login-page.png'></kbd>
+<br>Customer Dashboard<br><kbd><img src='..\master\images\customer-dashboard.png'></kbd>
+<br>Product List<br><kbd><img src='..\master\images\product-category.png'></kbd>
+<br>Product Details<br><kbd><img src='..\master\images\buy-product.png'></kbd>
+<br>Payment<br><kbd><img src='..\master\images\checkout-page.jpg'></kbd>
+<br>Payment Success<br><kbd><img src='..\master\images\sucessful-payment.jpg'></kbd>
+<br>Customer Logout<br><kbd><img src='..\master\images\log-out.jpg'></kbd>
+
 
 
 
@@ -115,6 +114,11 @@ Person #1 - Customer
 Person #2 - Admin
 1. An admin can verify customers and activate thei Virtual Card
 2. Manage Customers and Products
+
+<br>Admin Login<br><kbd><img src='..\master\images\admin-login.jpg'></kbd>
+<br>Admin Dashboard<br><kbd><img src='..\master\images\admin-options.jpg'></kbd>
+<br>Manage Customers<br><kbd><img src='..\master\images\admin-customer-view.png'></kbd>
+<br>Manage Products<br><kbd><img src='..\master\images\admin-product-view.png'></kbd>
 
 
 
