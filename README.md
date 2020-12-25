@@ -77,7 +77,17 @@ An admin manages multiple customers
 3. Admin - Product (1:M)
 An admin manages multiple products
 
-
+<style>
+    img
+    {
+      border-radius: 25px;
+      background: #73AD21;
+      padding: 20px; 
+      width: 200px;
+      height: 150px;  
+      box-shadow: 1px 1px 10px 1px grey;
+    }
+</style>
 <img src='..\master\images\ER-diagram.png' height=350px>
 
 <br>
